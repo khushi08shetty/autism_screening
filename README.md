@@ -1,5 +1,4 @@
-# autism_screening
-A website that let's you take an autism screening quiz and gives you a primitive diagnosis. 
+# autism_screening 
 This project was created with the objecive of making a website that allows you to take an autism screening quiz and give you a primitive diagnosis on whether you have autism or not. It is strictly not a medically acclimated quiz.
 
 Problem Statement:
