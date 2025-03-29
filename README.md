@@ -14,3 +14,6 @@ https://www.kaggle.com/datasets/andrewmvd/autism-screening-on-adults/data
 Description:
 This dataset is composed of survey results for more than 700 people who filled an app form. There are labels portraying whether the person received a diagnosis of autism, allowing machine learning models to predict the likelihood of having autism, therefore allowing healthcare professionals prioritize their resources.
 The column names include: A1_Score,A2_Score,A3_Score,A4_Score,A5_Score,A6_Score,A7_Score,A8_Score,A9_Score,A10_Score,age,gender,ethnicity,jaundice,autism,country_of_res,used_app_before,result,age_desc,relation,Class/ASD
+
+Code: Data pre-processing included cleaning and mapping data, then we ran multiple models to find that the model with the best accuracy was Logistic Regression.
+Deployment: We used flask to create the website and deployed it on render.
