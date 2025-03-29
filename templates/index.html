@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin: auto;
+        }
+        h2 {
+            color: #00bcd4;
+        }
+        .disclaimer {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .question {
+            margin: 10px 0;
+            text-align: left;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="number"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #008ba3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="disclaimer">THIS TEST IS NOT MEDICALLY ACCLAIMED</p>
+        <h2>Autism Screening Quiz</h2>
+        <form action="/predict" method="post">
+            <div class="question">
+                <p>1. I prefer to do things alone rather than with others.</p>
+                <input type="radio" name="A1" value="1" required> Yes
+                <input type="radio" name="A1" value="0" required> No
+            </div>
+            <div class="question">
+                <p>2. I find it hard to maintain conversations.</p>
+                <input type="radio" name="A2" value="1" required> Yes
+                <input type="radio" name="A2" value="0" required> No
+            </div>
+            <div class="question">
+                <p>3. I focus on details rather than the big picture.</p>
+                <input type="radio" name="A3" value="1" required> Yes
+                <input type="radio" name="A3" value="0" required> No
+            </div>
+            <div class="question">
+                <p>4. I am very sensitive to sensory stimuli (e.g., loud noises, bright lights).</p>
+                <input type="radio" name="A4" value="1" required> Yes
+                <input type="radio" name="A4" value="0" required> No
+            </div>
+            <div class="question">
+                <p>5. I have a strong preference for routines and sameness.</p>
+                <input type="radio" name="A5" value="1" required> Yes
+                <input type="radio" name="A5" value="0" required> No
+            </div>
+            <div class="question">
+                <p>6. I find it difficult to understand others' emotions.</p>
+                <input type="radio" name="A6" value="1" required> Yes
+                <input type="radio" name="A6" value="0" required> No
+            </div>
+            <div class="question">
+                <p>7. I tend to take things literally (difficulty with sarcasm, jokes).</p>
+                <input type="radio" name="A7" value="1" required> Yes
+                <input type="radio" name="A7" value="0" required> No
+            </div>
+            <div class="question">
+                <p>8. My speech patterns or tone are unusual.</p>
+                <input type="radio" name="A8" value="1" required> Yes
+                <input type="radio" name="A8" value="0" required> No
+            </div>
+            <div class="question">
+                <p>9. I have strong interests in specific topics (often obsessive).</p>
+                <input type="radio" name="A9" value="1" required> Yes
+                <input type="radio" name="A9" value="0" required> No
+            </div>
+            <div class="question">
+                <p>10. I find it difficult to make and maintain friendships.</p>
+                <input type="radio" name="A10" value="1" required> Yes
+                <input type="radio" name="A10" value="0" required> No
+            </div>
+            <div class="question">
+                <p>11. Age:</p>
+                <input type="number" name="age" required>
+            </div>
+            <br>
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction %}
+            <h3>Prediction: {{ prediction }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
